@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Student Certification Tracker&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f4f4f4;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 80%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="text"], input[type="number"], select, button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #4CAF50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #45a049;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Student Tech Certification Tracker&lt;/h1&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="container"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Add Student Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Add Student&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="addStudentForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="studentName"&gt;Student Name:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="studentName" placeholder="Enter student name" required&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="studentID"&gt;Student ID:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="studentID" placeholder="Enter student ID" required&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="submit"&gt;Add Student&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Add Certification Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Add Certification&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="addCertificationForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="certificationName"&gt;Certification Name:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="certificationName" placeholder="Enter certification name" required&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="certificationCode"&gt;Certification Code:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="certificationCode" placeholder="Enter certification code" required&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="submit"&gt;Add Certification&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Record Certification Attempt Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Record Certification Attempt&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="recordAttemptForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="studentSelect"&gt;Select Student:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="studentSelect" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value=""&gt;Select a student&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="certificationSelect"&gt;Select Certification:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="certificationSelect" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value=""&gt;Select a certification&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="attemptDate"&gt;Attempt Date:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="date" id="attemptDate" required&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;label for="attemptResult"&gt;Attempt Result:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;select id="attemptResult" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Pass"&gt;Pass&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;option value="Fail"&gt;Fail&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="submit"&gt;Record Attempt&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- View Full Report Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2&gt;View Full Report&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="viewReportButton"&gt;View Report&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="reportSection" style="display: none;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3&gt;Report&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="reportContent"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Dynamic report content will appear here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">// JavaScript to handle form submissions and dynamic interactions</p>
+<p class="p2"><br></p>
+<p class="p1">let students = [];</p>
+<p class="p1">let certifications = [];</p>
+<p class="p1">let attempts = [];</p>
+<p class="p2"><br></p>
+<p class="p1">// Add Student Functionality</p>
+<p class="p1">document.getElementById('addStudentForm').addEventListener('submit', function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let studentName = document.getElementById('studentName').value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let studentID = document.getElementById('studentID').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>students.push({ studentName, studentID });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateStudentSelect();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>alert('Student added successfully!');</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">// Add Certification Functionality</p>
+<p class="p1">document.getElementById('addCertificationForm').addEventListener('submit', function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let certificationName = document.getElementById('certificationName').value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let certificationCode = document.getElementById('certificationCode').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>certifications.push({ certificationName, certificationCode });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateCertificationSelect();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>alert('Certification added successfully!');</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">// Record Certification Attempt Functionality</p>
+<p class="p1">document.getElementById('recordAttemptForm').addEventListener('submit', function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let studentID = document.getElementById('studentSelect').value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let certificationCode = document.getElementById('certificationSelect').value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let attemptDate = document.getElementById('attemptDate').value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let attemptResult = document.getElementById('attemptResult').value;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>attempts.push({ studentID, certificationCode, attemptDate, attemptResult });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>alert('Attempt recorded successfully!');</p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">// Update Student Select Options</p>
+<p class="p1">function updateStudentSelect() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let studentSelect = document.getElementById('studentSelect');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>studentSelect.innerHTML = '&lt;option value=""&gt;Select a student&lt;/option&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>students.forEach(student =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let option = document.createElement('option');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>option.value = student.studentID;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>option.textContent = `${student.studentName} (${student.studentID})`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>studentSelect.appendChild(option);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// Update Certification Select Options</p>
+<p class="p1">function updateCertificationSelect() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let certificationSelect = document.getElementById('certificationSelect');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>certificationSelect.innerHTML = '&lt;option value=""&gt;Select a certification&lt;/option&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>certifications.forEach(cert =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let option = document.createElement('option');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>option.value = cert.certificationCode;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>option.textContent = `${cert.certificationName} (${cert.certificationCode})`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>certificationSelect.appendChild(option);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">// View Report Button</p>
+<p class="p1">document.getElementById('viewReportButton').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let reportSection = document.getElementById('reportSection');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let reportContent = document.getElementById('reportContent');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>reportContent.innerHTML = '';</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>attempts.forEach(attempt =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Get Student Name and Certification Name from arrays</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let student = students.find(s =&gt; s.studentID === attempt.studentID);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let certification = certifications.find(c =&gt; c.certificationCode === attempt.certificationCode);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Create a report entry</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let attemptReport = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>attemptReport.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Student Name: ${student ? student.studentName : 'N/A'},<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>Certification Name: ${certification ? certification.certificationName : 'N/A'},<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>Certification Code: ${certification ? certification.certificationCode : 'N/A'},<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>Attempt Date: ${attempt.attemptDate},<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>Result: ${attempt.attemptResult}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>reportContent.appendChild(attemptReport);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>reportSection.style.display = 'block';</p>
+<p class="p1">});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
