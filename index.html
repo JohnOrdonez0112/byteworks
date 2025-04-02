@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Certification Tracker</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background */
+            color: white;
+        }
+        header {
+            background-color: #000000; /* Black background */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .byte-works {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ffcc;
+            margin-top: -10px;
+        }
+        h1 {
+            color: white; /* Title text set to white */
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Dark section background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: white;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #333333; /* Dark button background */
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #555555; /* Darker shade when hovered */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            color: white;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Student Tech Certification Tracker</h1>
+    <p class="byte-works">Byte Works</p>
+</header>
+
+<div class="container">
+    <!-- Add Student Section -->
+    <div class="section">
+        <h2>Add Student</h2>
+        <form id="addStudentForm">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" placeholder="Enter student name" required>
+
+            <label for="studentID">Student ID:</label>
+            <input type="text" id="studentID" placeholder="Enter student ID" required>
+
+            <button type="submit">Add Student</button>
+        </form>
+    </div>
+
+    <!-- Add Certification Section -->
+    <div class="section">
+        <h2>Add Certification</h2>
+        <form id="addCertificationForm">
+            <label for="certificationName">Certification Name:</label>
+            <input type="text" id="certificationName" placeholder="Enter certification name" required>
+
+            <label for="certificationCode">Certification Code:</label>
+            <input type="text" id="certificationCode" placeholder="Enter certification code" required>
+
+            <button type="submit">Add Certification</button>
+        </form>
+    </div>
+
+    <!-- Record Certification Attempt Section -->
+    <div class="section">
+        <h2>Record Certification Attempt</h2>
+        <form id="recordAttemptForm">
+            <label for="studentSelect">Select Student:</label>
+            <select id="studentSelect" required>
+                <option value="">Select a student</option>
+            </select>
+
+            <label for="certificationSelect">Select Certification:</label>
+            <select id="certificationSelect" required>
+                <option value="">Select a certification</option>
+            </select>
+
+            <label for="attemptDate">Attempt Date:</label>
+            <input type="date" id="attemptDate" required>
+
+            <label for="attemptResult">Attempt Result:</label>
+            <select id="attemptResult" required>
+                <option value="Pass">Pass</option>
+                <option value="Fail">Fail</option>
+            </select>
+
+            <button type="submit">Record Attempt</button>
+        </form>
+    </div>
+
+    <!-- View Full Report Section -->
+    <div class="section">
+        <h2>View Full Report</h2>
+        <button id="viewReportButton">View Report</button>
+        <div id="reportSection" style="display: none;">
+            <h3>Report</h3>
+            <div id="reportContent">
+                <!-- Dynamic report content will appear here -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// JavaScript to handle form submissions and dynamic interactions
+
+let students = [];
+let certifications = [];
+let attempts = [];
+
+// Add Student Functionality
+document.getElementById('addStudentForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let studentName = document.getElementById('studentName').value;
+    let studentID = document.getElementById('studentID').value;
+
+    students.push({ studentName, studentID });
+    updateStudentSelect();
+    alert('Student added successfully!');
+});
+
+// Add Certification Functionality
+document.getElementById('addCertificationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let certificationName = document.getElementById('certificationName').value;
+    let certificationCode = document.getElementById('certificationCode').value;
+
+    certifications.push({ certificationName, certificationCode });
+    updateCertificationSelect();
+    alert('Certification added successfully!');
+});
+
+// Record Certification Attempt Functionality
+document.getElementById('recordAttemptForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let studentID = document.getElementById('studentSelect').value;
+    let certificationCode = document.getElementById('certificationSelect').value;
+    let attemptDate = document.getElementById('attemptDate').value;
+    let attemptResult = document.getElementById('attemptResult').value;
+
+    attempts.push({ studentID, certificationCode, attemptDate, attemptResult });
+    alert('Attempt recorded successfully!');
+});
+
+// Update Student Select Options
+function updateStudentSelect() {
+    let studentSelect = document.getElementById('studentSelect');
+    studentSelect.innerHTML = '<option value="">Select a student</option>';
+    students.forEach(student => {
+        let option = document.createElement('option');
+        option.value = student.studentID;
+        option.textContent = `${student.studentName} (${student.studentID})`;
+        studentSelect.appendChild(option);
+    });
+}
+
+// Update Certification Select Options
+function updateCertificationSelect() {
+    let certificationSelect = document.getElementById('certificationSelect');
+    certificationSelect.innerHTML = '<option value="">Select a certification</option>';
+    certifications.forEach(cert => {
+        let option = document.createElement('option');
+        option.value = cert.certificationCode;
+        option.textContent = `${cert.certificationName} (${cert.certificationCode})`;
+        certificationSelect.appendChild(option);
+    });
+}
+
+// View Report Button
+document.getElementById('viewReportButton').addEventListener('click', function() {
+    let reportSection = document.getElementById('reportSection');
+    let reportContent = document.getElementById('reportContent');
+
+    reportContent.innerHTML = '';
+    
+    attempts.forEach(attempt => {
+        // Get Student Name and Certification Name from arrays
+        let student = students.find(s => s.studentID === attempt.studentID);
+        let certification = certifications.find(c => c.certificationCode === attempt.certificationCode);
+
+        // Create a report entry
+        let attemptReport = document.createElement('div');
+        attemptReport.innerHTML = `
+            <p>Student Name: ${student ? student.studentName : 'N/A'}, 
+            Certification Name: ${certification ? certification.certificationName : 'N/A'}, 
+            Certification Code: ${certification ? certification.certificationCode : 'N/A'}, 
+            Attempt Date: ${attempt.attemptDate}, 
+            Result: ${attempt.attemptResult}</p>
+        `;
+        reportContent.appendChild(attemptReport);
+    });
+
+    reportSection.style.display = 'block';
+});
+</script>
+
+</body>
+</html>
